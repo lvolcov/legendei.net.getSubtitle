@@ -15,9 +15,7 @@ async function Do() {
     let html = await FetchHtml().then(text => { return text }); // Get html from the promise
     const subID = html.substr(html.indexOf('<a href="https://legendei.net/?dl_id=') + 37, 10).replace(/[^0-9]+/, '')
     window.location = "https://legendei.net/?dl_id=" + subID
-
 }
-
 
 // Exe
 Do();
